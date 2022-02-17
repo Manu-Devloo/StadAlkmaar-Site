@@ -1,4 +1,4 @@
-.Rules{
+.Rules {
     margin-bottom: 5rem;
     margin-top: 2rem;
     display: grid;
@@ -10,17 +10,17 @@
     list-style: decimal-leading-zero;
 }
 
-.Rules li{
-    
+.Rules li {
+
     color: black;
     margin-bottom: 1.5rem;
 }
 
-li a{
+li a {
     color: inherit;
 }
 
-.Rules-Nav{
+.Rules-Nav {
     border: 2px solid rgb(71, 71, 71);
     background-color: rgb(71, 71, 71);
     position: fixed;
@@ -31,11 +31,49 @@ li a{
     padding-left: 0rem;
     padding-right: 2rem;
     list-style: none;
-    
+    height: 25rem;
+
 }
 
-.Rules-Nav li{
+.Rules-Nav li {
     margin-bottom: 1.5rem;
     color: white;
     list-style: none;
+}
+
+.Rules-Nav-Links {
+    width: 13rem;
+    transition: width 2s;
+}
+
+.Rules-Nav-Links li {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+#open-close {
+    display: none;
+}
+
+#open-close:checked~.Rules-Nav-Links {
+    width: 0.5rem;
+}
+
+#open-close:checked~.Rules-Nav-Links li {
+    opacity: 0;
+    pointer-events: none
+}
+
+#open-close:checked~.open {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.open {
+    position: absolute;
+    top: 42%;
+    right: 1.5rem;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    transition: transform 1s;
 }
