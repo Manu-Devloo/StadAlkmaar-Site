@@ -39,6 +39,12 @@ li a {
     margin-bottom: 1.5rem;
     color: white;
     list-style: none;
+    opacity: 100%;
+}
+
+.Rules-Nav:hover{
+    opacity: 70%;
+    transition: opacity 1s;
 }
 
 .Rules-Nav-Links {
