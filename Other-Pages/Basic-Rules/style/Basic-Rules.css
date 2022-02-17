@@ -1,5 +1,6 @@
 .Rules{
     margin-bottom: 5rem;
+    margin-top: 2rem;
     display: grid;
     grid-template-columns: 40% 40%;
     justify-content: center;

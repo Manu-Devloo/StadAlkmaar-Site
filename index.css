@@ -6,6 +6,9 @@
 .GridJobs{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     z-index: 4;
     margin: 5rem;
 }
@@ -15,32 +18,20 @@
 }
 
 .GridJobs img{
-    aspect-ratio: 16 / 9;
     width: 80%;
-}
-
-.GridJobs article{
-    text-align: center;
-}
-
-.GridJobs article h1{
-    font-size: 32px;
-    margin-top: 0;
-}  
+} 
 
 /*buttons*/
-
-button{
+.button{
     background-color: rgb(52, 88, 235);
     border-radius: 0.35rem;
-}
-
-button a{
     color: white;
-    font-size: 24px;
+    font-size: 20px;
+    padding: 0.2rem;
+    border: 2px solid lightslategray;
     text-decoration: none;
     margin-left: 1rem;
     margin-right: 1rem;
     margin-top: 0.125rem;
-    margin-bottom: 0.125;
+    margin-bottom: 0.125rem;
 }
