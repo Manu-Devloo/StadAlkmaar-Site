@@ -1,0 +1,47 @@
+main{
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 8%;
+}
+
+form{
+    margin-bottom: 5rem;
+}
+
+label{
+    width: 100%;
+    font-size: 16px;
+}
+
+label span{
+    color: red;
+}
+
+input{
+    margin-left: 0;
+}
+
+.groot{
+    width: 100%;
+    margin: 0.5rem;
+}
+
+.klein{
+    width: 45%;
+    margin: 0.5rem;
+}
+
+textarea{
+    width: 100%;
+    height: fit-content;
+    margin: 0.5rem;
+}
+
+.solli{
+    padding: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 1rem;
+    background-color: rgb(71, 71, 71);
+    color: white;
+}

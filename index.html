@@ -8,22 +8,61 @@
 
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/navbar/css/navbar.css">
 
     <title>Document</title>
 </head>
 
 <body>
-    <div id="nav-placeholder"></div>
+    <header>
+        <div id="nav-placeholder"></div>
 
-    <video class="Intro-Video" autoplay muted loop>
-        <source src="images/Intro.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video> 
+        <video class="Intro-Video" autoplay muted loop>
+            <source src="images/Intro.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </header>
+
+    <main>
+        <div class="GridJobs">
+            <article><img src="/images/anwb.png" alt="anwb"></article>
+            <article>
+                <h1>ANWB</h1>
+                <p>soon</p>
+                <button><a href="/Other-Pages/Solicitaties/anwb/anwb.html">Solliciteer</a></button>
+            </article>
+            <article>
+                <h1>AMBU</h1>
+                <p>soon</p>
+                <button><a href="#">Solliciteer</a></button>
+            </article>
+            <article><img src="/images/ambu.png" alt="ambu"></article>
+            <article class="RijTwee"><img src="/images/politie.png" alt="politie"></article>
+            <article class="RijTwee">
+                <h1>POLITIE</h1>
+                <p>soon</p>
+                <button><a href="#">Solliciteer</a></button>
+            </article>
+            <article class="RijTwee">
+                <h1>KMAR</h1>
+                <p>soon</p>
+                <button><a href="#">Solliciteer</a></button>
+            </article>
+            <article class="RijTwee"><img src="/images/kmar.png" alt="kmar"></article>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2022 Stad Alkmaar - Design / Execution
+            <a href="">Manu Devloo</a>, <a href="">Quinten callaert</a>
+        </p>
+    </footer>
+
 
     <script>
 
         $(function () {
-            $("#nav-placeholder").load("navbar/navbar.html");
+            $("#nav-placeholder").load("/navbar/navbar.html");
         });
 
     </script>

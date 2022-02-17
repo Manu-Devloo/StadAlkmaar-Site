@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="/navbar/css/navbar.css">
+    <link rel="stylesheet" href="/Other-Pages/Solicitaties/anwb/anwb.css">
+
+    <title>Sollicitatie ANWb</title>
+</head>
+
+<body>
+    <header>
+        <div id="nav-placeholder"></div>
+    </header>
+
+    <main>
+        <h1>Solliciteren ANWB</h1>
+
+        <form action="#">
+            <label>Ingame naam <span>*</span>
+                <br>
+                <input type="text" class="groot" required>
+            </label>
+
+            <label>Ingame nummer <span>*</span>
+                <input type="number" class="groot" required>
+            </label>
+
+            <label>Email <span>*</span>
+                <br>
+                <input type="email" class="klein" required>
+            </label>
+            <br>
+            <label>Discord naam + (#0000) <span>*</span>
+                <input type="text" class="groot" required>
+            </label>
+
+            <label>Steam naam <span>*</span>
+                <input type="text" class="groot" required>
+            </label>
+
+            <label>Echte leeftijd <span>*</span>
+                <input type="number" class="groot" required>
+            </label>
+
+            <label>Waarom solliciteer je specifiek voor de ANWB? <span>*</span>
+                <br>
+                <textarea cols="30" rows="10" required></textarea>
+            </label>
+
+            <label>Noem 3 goede eigenschappen van jezelf <span>*</span>
+                <br>
+                <textarea cols="30" rows="10" required></textarea>
+            </label>
+
+            <label>Noem 3 verbeterpunten voor jezelf <span>*</span>
+                <br>
+                <textarea cols="30" rows="10" required></textarea>
+            </label>
+
+            <label>Op welke manier hoop jij een waardevolle toevoeging te zijn voor de ANWB? <span>*</span>
+                <br>
+                <textarea cols="30" rows="10" required></textarea> 
+            </label>
+
+            <label>Hoe presteer jij onder tijdsdruk? <span>*</span>
+                <br>
+                <textarea cols="30" rows="10" required></textarea>
+            </label>
+
+            <label>Wat is jouw ervaring met RolePlay? <span>*</span>
+                <br>
+                <textarea cols="30" rows="10" required></textarea>
+            </label>
+
+            <label>Heb je al eerdere ervaringen met het ANWB beroep? <span>*</span>
+                <br>
+                <textarea cols="30" rows="10" required></textarea>
+            </label>
+
+            <label>Wat wil jij bereiken bij de ANWB? <span>*</span>
+                <br>
+                <textarea cols="30" rows="10" required></textarea>
+            </label>
+            
+            <input type="submit" class="solli" value="Verzenden">
+            <input type="reset" class="solli" value="Leegmaken">
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2022 Stad Alkmaar - Design / Execution
+            <a href="">Manu Devloo</a>, <a href="">Quinten callaert</a>
+        </p>
+    </footer>
+
+
+    <script>
+
+        $(function () {
+            $("#nav-placeholder").load("/navbar/navbar.html");
+        });
+
+    </script>
+
+</body>
+
+</html>

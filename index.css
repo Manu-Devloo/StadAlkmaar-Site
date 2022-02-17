@@ -2,3 +2,45 @@
     width: 100%;
     height: auto;
 }
+
+.GridJobs{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    z-index: 4;
+    margin: 5rem;
+}
+
+.RijTwee{
+    margin-top: 5rem;
+}
+
+.GridJobs img{
+    aspect-ratio: 16 / 9;
+    width: 80%;
+}
+
+.GridJobs article{
+    text-align: center;
+}
+
+.GridJobs article h1{
+    font-size: 32px;
+    margin-top: 0;
+}  
+
+/*buttons*/
+
+button{
+    background-color: rgb(52, 88, 235);
+    border-radius: 0.35rem;
+}
+
+button a{
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 0.125rem;
+    margin-bottom: 0.125;
+}

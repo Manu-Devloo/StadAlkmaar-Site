@@ -1,0 +1,40 @@
+.Rules{
+    margin-bottom: 5rem;
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: center;
+    column-gap: 10%;
+    max-width: 1000px;
+    float: left;
+    list-style: decimal-leading-zero;
+}
+
+.Rules li{
+    
+    color: black;
+    margin-bottom: 1.5rem;
+}
+
+li a{
+    color: inherit;
+}
+
+.Rules-Nav{
+    border: 2px solid rgb(71, 71, 71);
+    background-color: rgb(71, 71, 71);
+    position: fixed;
+    right: 2rem;
+    top: 30%;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    padding-left: 0rem;
+    padding-right: 2rem;
+    list-style: none;
+    
+}
+
+.Rules-Nav li{
+    margin-bottom: 1.5rem;
+    color: white;
+    list-style: none;
+}
