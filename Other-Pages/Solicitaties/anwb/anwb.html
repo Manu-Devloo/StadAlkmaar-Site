@@ -21,45 +21,45 @@
     <main>
         <h1>Solliciteren ANWB</h1>
 
-        <form action="#">
-            <label>Ingame naam <span>*</span>
+        <form onsubmit="sendContact(event)">
+            <label for="IngameNaam">Ingame naam <span>*</span>
                 <br>
                 <input type="text" class="groot" required>
             </label>
 
-            <label>Discord naam + (#0000) <span>*</span>
+            <label for="DiscordNaam">Discord naam + (#0000) <span>*</span>
                 <input type="text" class="groot" required>
             </label>
 
-            <label>Steam naam <span>*</span>
+            <label for="SteamNaam">Steam naam <span>*</span>
                 <input type="text" class="groot" required>
             </label>
 
-            <label>Hoelang ben je al in de stad?<span>*</span>
+            <label for="Hoelang">Hoelang ben je al in de stad?<span>*</span>
                 <input type="number" class="groot" required>
             </label>
 
-            <label>Leeftijd<span>*</span>
+            <label for="Leeftijd">Leeftijd<span>*</span>
                 <br>
                 <textarea cols="30" rows="10" required></textarea>
             </label>
 
-            <label>Wat zijn je sterke punten?<span>*</span>
+            <label for="SterkePunten">Wat zijn je sterke punten?<span>*</span>
                 <br>
                 <textarea cols="30" rows="10" required></textarea>
             </label>
 
-            <label>Wat is je motivatie om bij de ANWB te komen werken?<span>*</span>
+            <label for="Motivatie">Wat is je motivatie om bij de ANWB te komen werken?<span>*</span>
                 <br>
                 <textarea cols="30" rows="10" required></textarea>
             </label>
 
-            <label>Een eventuele aanvulling of opmerking<span>*</span>
+            <label for="Aanvulling">Een eventuele aanvulling of opmerking<span>*</span>
                 <br>
                 <textarea cols="30" rows="10" required></textarea> 
             </label>
 
-            <label>Ben je minstens 6 uur per week beschikbaar?
+            <label for="Progress">Ben je minstens 6 uur per week beschikbaar?
                 <br>
                 <input class="check" type="checkbox" name="keuze" value="1">Ja
                 <input type="checkbox">Nee
@@ -84,6 +84,62 @@
         $(function () {
             $("#nav-placeholder").load("/navbar/navbar.html");
         });
+
+        async function sendContact(ev) {
+        ev.preventDefault();
+
+        const senderIngameNaam = document
+          .getElementById('IngameNaam').value;
+        const senderDiscordNaam = document
+          .getElementById('DiscordNaam').value;
+        const senderSteamNaam = document
+          .getElementById('SteamNaam').value;
+        const senderHoelang = document
+          .getElementById('Hoelang').value;
+        const senderLeeftijd = document
+          .getElementById('Leeftijd').value;
+        const senderSterkePunten = document
+          .getElementById('SterkePunten').value;
+        const senderMotivatie = document
+          .getElementById('Motivatie').value;
+        const senderAanvulling = document
+          .getElementById('Aanvulling').value;
+        const senderProgress = document
+          .getElementById('Progress').value;
+
+        const webhookBody = {
+          embeds: [{
+            title: 'Contact Form Submitted',
+            fields: [
+              { name: 'IngameNaam', value: senderIngameNaam },
+              { name: 'MesDiscordNaamsage', value: senderDiscordNaam },
+              { name: 'SteamNaam', value: senderSteamNaam},
+              { name: 'Hoelang', value: senderHoelang },
+              { name: 'Leeftijd', value: senderLeeftijd },
+              { name: 'SterkePunten', value: senderSterkePunten},
+              { name: 'Motivatie', value: senderMotivatie },
+              { name: 'Aanvulling', value: senderAanvulling },
+              { name: 'Progress', value: senderProgress},
+            ]
+          }],
+        };
+
+        const webhookUrl = 'https://discord.com/api/webhooks/944224045359046666/Q-b_H_3TQKZk1nWD5ZUpkKxLxaqHGrvYB7TLrmTC_22gmUp-EJK0wLLvKDNWrY9RsSLb';
+
+        const response = await fetch(webhookUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(webhookBody),
+        });
+
+        if (response.ok) {
+          alert('I have received your message!');
+        } else {
+          alert('There was an error! Try again later!');
+        }
+      }
 
     </script>
 
