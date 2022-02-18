@@ -26,7 +26,7 @@ async function sendContact(ev) {
 
     const webhookBody = {
         embeds: [{
-            title: 'Sollicitatie ANWB',
+            title: 'Sollicitatie Politie',
             fields: [
                 { name: 'IngameNaam', value: senderIngameNaam },
                 { name: 'DiscordNaam', value: senderDiscordNaam },
