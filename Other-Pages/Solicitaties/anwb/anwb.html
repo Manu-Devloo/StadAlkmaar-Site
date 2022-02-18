@@ -24,45 +24,45 @@
         <form onsubmit="sendContact(event)">
             <label for="IngameNaam">Ingame naam <span>*</span>
                 <br>
-                <input type="text" class="groot" required>
+                <input type="text" class="groot" id="IngameNaam" required>
             </label>
 
             <label for="DiscordNaam">Discord naam + (#0000) <span>*</span>
-                <input type="text" class="groot" required>
+                <input type="text" class="groot" id="DiscordNaam" required>
             </label>
 
             <label for="SteamNaam">Steam naam <span>*</span>
-                <input type="text" class="groot" required>
+                <input type="text" class="groot" id="SteamNaam" required>
             </label>
 
             <label for="Hoelang">Hoelang ben je al in de stad?<span>*</span>
-                <input type="number" class="groot" required>
+                <input type="number" class="groot" id="Hoelang" required>
             </label>
 
             <label for="Leeftijd">Leeftijd<span>*</span>
                 <br>
-                <textarea cols="30" rows="10" required></textarea>
+                <textarea cols="30" rows="10" id="Leeftijd" required></textarea>
             </label>
 
             <label for="SterkePunten">Wat zijn je sterke punten?<span>*</span>
                 <br>
-                <textarea cols="30" rows="10" required></textarea>
+                <textarea cols="30" rows="10" id="SterkePunten" required></textarea>
             </label>
 
             <label for="Motivatie">Wat is je motivatie om bij de ANWB te komen werken?<span>*</span>
                 <br>
-                <textarea cols="30" rows="10" required></textarea>
+                <textarea cols="30" rows="10" id="Motivatie" required></textarea>
             </label>
 
             <label for="Aanvulling">Een eventuele aanvulling of opmerking<span>*</span>
                 <br>
-                <textarea cols="30" rows="10" required></textarea> 
+                <textarea cols="30" rows="10" id="Aanvulling" required></textarea> 
             </label>
 
             <label for="Progress">Ben je minstens 6 uur per week beschikbaar?
                 <br>
                 <input class="check" type="checkbox" name="keuze" value="1">Ja
-                <input type="checkbox">Nee
+                <input type="checkbox" id="Progress">Nee
             </label>
             <br>
             <input type="submit" class="solli" value="Verzenden">
@@ -112,7 +112,7 @@
             title: 'Contact Form Submitted',
             fields: [
               { name: 'IngameNaam', value: senderIngameNaam },
-              { name: 'MesDiscordNaamsage', value: senderDiscordNaam },
+              { name: 'DiscordNaam', value: senderDiscordNaam },
               { name: 'SteamNaam', value: senderSteamNaam},
               { name: 'Hoelang', value: senderHoelang },
               { name: 'Leeftijd', value: senderLeeftijd },
