@@ -2,150 +2,142 @@
 <html lang="nl">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-  <link rel="stylesheet" href="/navbar/css/navbar.css">
-  <link rel="stylesheet" href="anwb.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="politie.js"></script>
+    <link rel="stylesheet" href="/navbar/css/navbar.css">
+    <link rel="stylesheet" href="anwb.css">
 
-  <title>Sollicitatie ANWb</title>
+    <title>Sollicitatie ANWb</title>
 </head>
 
 <body>
-  <header>
-    <div id="nav-placeholder"></div>
-  </header>
+    <header>
+        <div id="nav-placeholder"></div>
+    </header>
 
-  <main>
-    <h1>Solliciteren ANWB</h1>
+    <main>
+        <h1>Solliciteren Politie</h1>
 
-    <form onsubmit="sendContact(event)">
-      <label for="IngameNaam">Ingame naam <span>*</span>
-        <br>
-        <input type="text" class="groot" id="IngameNaam" required>
-      </label>
+        <form onsubmit="sendContact(event)">
+            <label for="IngameNaam">Ingame naam <span>*</span>
+                <br>
+                <input type="text" class="groot" id="IngameNaam" required>
+            </label>
 
-      <label for="DiscordNaam">Discord naam + (#0000) <span>*</span>
-        <input type="text" class="groot" id="DiscordNaam" required>
-      </label>
+            <label for="DiscordNaam">Discord naam + (#0000) <span>*</span>
+                <input type="text" class="groot" id="DiscordNaam" required>
+            </label>
 
-      <label for="SteamNaam">Steam naam <span>*</span>
-        <input type="text" class="groot" id="SteamNaam" required>
-      </label>
+            <label for="SteamNaam">Steam naam <span>*</span>
+                <input type="text" class="groot" id="SteamNaam" required>
+            </label>
 
-      <label for="Hoelang">Hoelang ben je al in de stad?<span>*</span>
-        <input type="number" class="groot" id="Hoelang" required>
-      </label>
+            <label for="Hoelang">Hoelang ben je al in de stad?<span>*</span>
+                <input type="number" class="groot" id="Hoelang" required>
+            </label>
 
-      <label for="Leeftijd">Leeftijd<span>*</span>
-        <br>
-        <textarea cols="30" rows="10" id="Leeftijd" required></textarea>
-      </label>
+            <label for="Leeftijd">Leeftijd<span>*</span>
+                <br>
+                <textarea cols="30" rows="10" id="Leeftijd" required></textarea>
+            </label>
 
-      <label for="SterkePunten">Wat zijn je sterke punten?<span>*</span>
-        <br>
-        <textarea cols="30" rows="10" id="SterkePunten" required></textarea>
-      </label>
+            <label for="SterkePunten">Wat zijn je sterke punten?<span>*</span>
+                <br>
+                <textarea cols="30" rows="10" id="SterkePunten" required></textarea>
+            </label>
 
-      <label for="Motivatie">Wat is je motivatie om bij de ANWB te komen werken?<span>*</span>
-        <br>
-        <textarea cols="30" rows="10" id="Motivatie" required></textarea>
-      </label>
+            <label for="Motivatie">Wat is je motivatie om bij de Politie te komen werken?<span>*</span>
+                <br>
+                <textarea cols="30" rows="10" id="Motivatie" required></textarea>
+            </label>
 
-      <label for="Aanvulling">Een eventuele aanvulling of opmerking<span>*</span>
-        <br>
-        <textarea cols="30" rows="10" id="Aanvulling" required></textarea>
-      </label>
+            <label for="Aanvulling">Een eventuele aanvulling of opmerking<span>*</span>
+                <br>
+                <textarea cols="30" rows="10" id="Aanvulling" required></textarea> 
+            </label>
 
-      <p>Ben je minstens 6 uur per week beschikbaar?</p>
+            <label for="Progress">Ben je minstens 6 uur per week beschikbaar?
+                <br>
+                <input class="check" type="checkbox" name="keuze" value="1">Ja
+                <input type="checkbox" id="Progress">Nee
+            </label>
+            <br>
+            <input type="submit" class="solli" value="Verzenden">
+            <input type="reset" class="solli" value="Leegmaken">
 
-      <label for="Progress-Ja" class="checkbox-label">
-        <input class="checkbox" type="checkbox" id="Progress-Ja" value="Ja">Ja
-      </label>
+            
+        </form>
+    </main>
 
-      <label for="Progress-Nee" class="checkbox-label">
-        <input class="checkbox" type="checkbox" id="Progress-Nee" value="Nee">Nee
-      </label>
+    <footer>
+        <p>© 2022 Stad Alkmaar - Design / Execution
+            <a href="">Manu Devloo</a>, <a href="">Quinten callaert</a>
+        </p>
+    </footer>
 
-      <br>
-      <br>
-      <input type="submit" class="solli" value="Verzenden">
-      <input type="reset" class="solli" value="Leegmaken">
-
-
-    </form>
-  </main>
-
-  <footer>
-    <p>© 2022 Stad Alkmaar - Design / Execution
-      <a href="">Manu Devloo</a>, <a href="">Quinten callaert</a>
-    </p>
-  </footer>
-
-  <script>
-    $(function () {
+    <script>$(function () {
       $("#nav-placeholder").load("/navbar/navbar.html");
-    });
-
-    async function sendContact(ev) {
+  });
+  
+  async function sendContact(ev) {
       ev.preventDefault();
-
+  
       const senderIngameNaam = document
-        .getElementById('IngameNaam').value;
+          .getElementById('IngameNaam').value;
       const senderDiscordNaam = document
-        .getElementById('DiscordNaam').value;
+          .getElementById('DiscordNaam').value;
       const senderSteamNaam = document
-        .getElementById('SteamNaam').value;
+          .getElementById('SteamNaam').value;
       const senderHoelang = document
-        .getElementById('Hoelang').value;
+          .getElementById('Hoelang').value;
       const senderLeeftijd = document
-        .getElementById('Leeftijd').value;
+          .getElementById('Leeftijd').value;
       const senderSterkePunten = document
-        .getElementById('SterkePunten').value;
+          .getElementById('SterkePunten').value;
       const senderMotivatie = document
-        .getElementById('Motivatie').value;
+          .getElementById('Motivatie').value;
       const senderAanvulling = document
-        .getElementById('Aanvulling').value;
+          .getElementById('Aanvulling').value;
       const senderProgress = document
-        .getElementById('Progress-Ja').value;
-      const senderProgress = document
-        .getElementById('Progress-Nee').value;
+          .getElementById('Progress').value;
+  
       const webhookBody = {
-        embeds: [{
-          title: 'Sollicitatie ANWB',
-          fields: [
-            { name: 'IngameNaam', value: senderIngameNaam },
-            { name: 'DiscordNaam', value: senderDiscordNaam },
-            { name: 'SteamNaam', value: senderSteamNaam },
-            { name: 'Hoelang', value: senderHoelang },
-            { name: 'Leeftijd', value: senderLeeftijd },
-            { name: 'SterkePunten', value: senderSterkePunten },
-            { name: 'Motivatie', value: senderMotivatie },
-            { name: 'Aanvulling', value: senderAanvulling },
-            { name: 'Progress', value: senderProgress },
-          ]
-        }],
+          embeds: [{
+              title: 'Sollicitatie ANWB',
+              fields: [
+                  { name: 'IngameNaam', value: senderIngameNaam },
+                  { name: 'DiscordNaam', value: senderDiscordNaam },
+                  { name: 'SteamNaam', value: senderSteamNaam },
+                  { name: 'Hoelang', value: senderHoelang },
+                  { name: 'Leeftijd', value: senderLeeftijd },
+                  { name: 'SterkePunten', value: senderSterkePunten },
+                  { name: 'Motivatie', value: senderMotivatie },
+                  { name: 'Aanvulling', value: senderAanvulling },
+                  { name: 'Progress', value: senderProgress },
+              ]
+          }],
       };
-
+  
       const webhookUrl = 'https://discord.com/api/webhooks/944224045359046666/Q-b_H_3TQKZk1nWD5ZUpkKxLxaqHGrvYB7TLrmTC_22gmUp-EJK0wLLvKDNWrY9RsSLb';
-
+  
       const response = await fetch(webhookUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(webhookBody),
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(webhookBody),
       });
-
+  
       if (response.ok) {
-        alert('I have received your message!');
+          alert('I have received your message!');
       } else {
-        alert('There was an error! Try again later!');
+          alert('There was an error! Try again later!');
       }
-    }
-  </script>
+  }</script>
 
 </body>
 
