@@ -50,3 +50,7 @@ textarea{
     background-color: rgb(71, 71, 71);
     color: white;
 }
+
+.check{
+    padding-right: 2rem;
+}
