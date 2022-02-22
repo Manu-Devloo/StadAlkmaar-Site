@@ -1,12 +1,10 @@
 .Rules {
     margin-bottom: 5rem;
-    margin-top: 2rem;
     display: grid;
     grid-template-columns: 40% 40%;
     justify-content: center;
     column-gap: 10%;
-    max-width: 1000px;
-    float: left;
+    max-width: 1100px;
     list-style: decimal-leading-zero;
 }
 
@@ -18,6 +16,10 @@
 
 li a {
     color: inherit;
+}
+
+h2{
+    margin-left: 1rem;
 }
 
 .Rules-Nav {
@@ -40,11 +42,6 @@ li a {
     color: white;
     list-style: none;
     opacity: 100%;
-}
-
-.Rules-Nav:hover{
-    opacity: 70%;
-    transition: opacity 1s;
 }
 
 .Rules-Nav-Links {
